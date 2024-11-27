@@ -19,6 +19,26 @@ strong {
   color: var(--global-text-color);
 }
 
+// Add the new H2 styling here
+h1:not(.blog-title) {
+  position: relative;
+  padding-left: 15px;
+  margin: 25px 0;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 25px; 
+    background-color: var(--global-theme-color);
+    border-radius: 2px; 
+  }
+}
+
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -441,8 +461,8 @@ footer.fixed-bottom {
 
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     text-align: center;
   }
 
@@ -458,8 +478,8 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 0.9rem;
 
   .container {
@@ -568,14 +588,37 @@ footer.sticky-bottom {
       font-size: 0.875rem;
       padding-top: 0.25rem;
       padding-bottom: 0;
+
+      a {
+        color: var(--global-text-color-light);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--global-theme-color);
+        }
+      }
     }
 
-    a {
+    a.post-title {
       color: var(--global-text-color);
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      
+      .fa-chevron-right {
+        margin-left: 7px;
+        font-size: 0.5em;
+        opacity: 0;
+        transition: all 0.2s ease;
+      }
 
       &:hover {
         color: var(--global-theme-color);
+        
+        .fa-chevron-right {
+          opacity: 1;
+          transform: translateX(5px);
+        }
       }
     }
 
@@ -590,6 +633,7 @@ footer.sticky-bottom {
     .page-link {
       color: var(--global-text-color);
       padding: 0.75rem 1.15rem;
+      font-weight: bold;
 
       &:hover {
         color: $black-color;
@@ -1305,3 +1349,151 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+.dotted-separator {
+  border: none;
+  border-top: 2px dotted var(--global-divider-color);
+  margin: 40px 0;
+  width: 100%;
+}
+
+.breadcrumb-nav {
+  margin: 1rem 0 0rem 0;
+  
+  .breadcrumb {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+      
+      a {
+        color: var(--global-theme-color);  // Using theme cyan color
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+          color: var(--global-hover-color);  // Using hover color variable
+        }
+      }
+      
+      // Arrow separator
+      + .breadcrumb-item::before {
+        content: "›";
+        padding: 0 0.6rem;
+        color: var(--global-text-color-light);  // Using theme light text color
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+      
+      &.active {
+        color: var(--global-text-color);  // Using theme text color
+      }
+    }
+  }
+}
+
+.post-metadata {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  
+  span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.post-divider {
+  border: none;
+  border-top: 2px dotted var(--global-text-color-light);
+  margin: 1rem 0;
+  opacity: 0.5;
+}
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2em 0;
+  
+  a {
+    flex: 1;
+    display: flex;
+    padding: 0.6em;
+    text-decoration: none;
+    color: var(--global-text-color);
+    border: 1px solid var(--global-text-color-light);
+    border-radius: 8px;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+    max-width: 49%;
+    
+    &:hover {
+      border-color: var(--global-theme-color);
+      background-color: transparent;
+    }
+  }
+
+  .nav-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    width: 100%;
+  }
+
+  .nav-label {
+    font-size: 0.8em;
+    color: var(--global-text-color-light);
+    display: block;
+  }
+
+  .nav-title {
+    font-size: 0.8em;
+    line-height: 1.3;
+    display: block;
+    color: var(--global-theme-color);
+    font-weight: bold;
+  }
+
+  .prev-post, .next-post {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    width: 100%;
+
+    .nav-title {
+      color: var(--global-theme-color);
+      font-weight: bold;
+    }
+  }
+
+  .prev-post {
+    justify-content: flex-start;
+    .nav-text {
+      text-align: left;
+    }
+  }
+
+  .next-post {
+    justify-content: flex-end;
+    .nav-text {
+      text-align: right;
+    }
+  }
+
+  .next-post-only {
+    margin-left: auto; 
+  }
+}
+

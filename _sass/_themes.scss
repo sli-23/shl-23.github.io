@@ -5,19 +5,19 @@
 @use "sass:color";
 
 :root {
-  --global-bg-color: #{$white-color};
+  --global-bg-color: #F5F5F5;
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
+  --global-theme-color: #{$orange-color};
+  --global-hover-color: #{$orange-color};
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
+  --global-footer-bg-color: transparent;
+  --global-footer-text-color: #{$black-color};
+  --global-footer-link-color: #{$blue-color};
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #{$white-color};
+  --global-card-bg-color: #F5F5F5;
   --global-highlight-color: #{$red-color-dark};
   --global-back-to-top-bg-color: rgba(
     #{color.channel($black-color, "red", $space: rgb)},
@@ -79,12 +79,12 @@ html[data-theme="dark"] {
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
+  --global-theme-color: #{$orange-color};
+  --global-hover-color: #{$orange-color};
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
+  --global-footer-bg-color: transparent;
+  --global-footer-text-color: #{$white-color};
+  --global-footer-link-color: #{$blue-color};
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
@@ -154,4 +154,66 @@ html[data-theme-setting="light"] {
     padding-top: 12px;
     display: block;
   }
+}
+
+.blog-description {
+  font-family: "Playwrite CU", cursive;
+}
+
+.blog-title {
+  font-weight: bold;
+}
+
+// Navigation bar link hover and active states
+.navbar-nav .nav-item {
+  margin: 0 5px;
+
+  .nav-link {
+    position: relative;
+    
+    &:hover::after, 
+    &:active::after,
+    &.active::after { 
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: var(--global-theme-color);
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: var(--global-theme-color);
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+  }
+}
+
+.custom-pagination {
+  .page-item {
+    margin: 0 5px;
+
+    .page-link {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.nav-title-symbol {
+  color: var(--global-theme-color) !important;
+  margin-right: 5px;
+  font-weight: bold;
 }
