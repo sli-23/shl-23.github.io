@@ -24,7 +24,9 @@ pagination:
 {% if blog_name_size > 0 or blog_description_size > 0 %}
 
   <div class="header-bar">
-    <h1 class="blog-title">{{ site.blog_name }}</h1>
+    <div style="display: inline-block;">
+      <h1 class="blog-title">{{ site.blog_name }}.</h1>
+    </div>
     <h4 class="blog-description">{{ site.blog_description }}</h4>
   </div>
   {% endif %}
