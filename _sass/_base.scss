@@ -569,6 +569,10 @@ footer.sticky-bottom {
   text-align: center;
   padding-top: 1rem;
 
+  @media (max-width: 576px) {
+    display: none;  // Hide on mobile devices
+  }
+
   ul {
     justify-content: center;
     display: flow-root;
@@ -1552,6 +1556,7 @@ ninja-keys::part(ninja-input-wrapper) {
   }
 }
 
+// Custom pagination
 .custom-pagination {
   .page-item {
     margin: 0 5px;
