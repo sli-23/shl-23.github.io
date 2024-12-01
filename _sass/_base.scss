@@ -1625,3 +1625,28 @@ ninja-keys::part(ninja-input-wrapper) {
   margin-right: 5px;
 }
 
+@media screen and (max-width: 870px) {
+  .col-sm-4 {
+    .text-3em {
+      font-size: calc(2em + 1vw) !important;
+    }
+    
+    .text-4-5em {
+      font-size: calc(3.5em + 1vw) !important;
+      margin-top: -30px !important;
+    }
+    
+    .text-1-2em {
+      font-size: calc(1em + 0.2vw) !important;
+    }
+    
+    .text-3-8em {
+      font-size: calc(2.8em + 1vw) !important;
+    }
+    
+    .margin-adjust {
+      margin-top: -35px !important;
+    }
+  }
+}
+
