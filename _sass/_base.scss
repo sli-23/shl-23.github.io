@@ -1736,3 +1736,27 @@ ninja-keys::part(ninja-input-wrapper) {
   color: var(--global-theme-color) !important;
   margin-right: 5px;
 }
+
+:root {
+  // Note block colors
+  --global-note-block: #448aff;        // Blue
+  --global-note-block-title: #2979ff;  // Slightly darker blue
+  --global-note-block-text: var(--global-text-color);
+
+  // Important block colors
+  --global-important-block: #9c27b0;     // Purple
+  --global-important-block-title: #7b1fa2; // Slightly darker purple
+  --global-important-block-text: var(--global-text-color);
+}
+
+[data-theme='dark'] {
+  // Note block colors - dark theme
+  --global-note-block: #82b1ff;        // Lighter blue for dark theme
+  --global-note-block-title: #448aff;  // Slightly darker blue for dark theme
+  --global-note-block-text: var(--global-text-color);
+
+  // Important block colors - dark theme
+  --global-important-block: #ce93d8;     // Lighter purple for dark theme
+  --global-important-block-title: #ba68c8; // Slightly darker purple for dark theme
+  --global-important-block-text: var(--global-text-color);
+}
