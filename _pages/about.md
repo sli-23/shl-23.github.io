@@ -6,9 +6,9 @@ subtitle:
 
 profile:
   align: right
-  image: 
+  image:
   image_circular: false # crops the image to make it circular
-  more_info: 
+  more_info:
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -126,7 +126,7 @@ function draw() {
 }
 </script>
 
-*<span style="color: orange; font-weight: bold;"> > code ref:</span> https://p5js.org/examples/angles-and-motion-aim/*
+_<span style="color: orange; font-weight: bold;"> > code ref:</span> https://p5js.org/examples/angles-and-motion-aim/_
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-4 mt-3 mt-md-0">
@@ -158,7 +158,7 @@ function draw() {
           let container = document.getElementById('square-sketch-holder');
           let canvas = p.createCanvas(container.offsetWidth, container.offsetWidth);
           canvas.parent('square-sketch-holder');
-          
+
           squareSize = container.offsetWidth * 0.8;
           rNoise = squareSize * 0.067;
 
@@ -245,6 +245,7 @@ function draw() {
 
       new p5(squareSketch);
     </script>
+
   </div>
   <div class="col-sm-4 mt-3 mt-md-0">
     <div style="text-align: left; margin-top: -10px;" class="responsive-text">
@@ -264,21 +265,21 @@ function draw() {
     <style>
       @media screen and (min-width: 768px) and (max-width: 1024px) {
         .responsive-text .text-1 { font-size: 2.4em !important; }
-        .responsive-text .text-2 { 
+        .responsive-text .text-2 {
           font-size: 3.6em !important;
           margin-top: -32px !important;
         }
         .responsive-text .text-3 { font-size: 1em !important; }
-        .responsive-text .text-4 { 
+        .responsive-text .text-4 {
           font-size: 3em !important;
           margin-top: -6px !important;
         }
-        .responsive-text .text-5 { 
+        .responsive-text .text-5 {
           font-size: 3em !important;
           margin-top: -35px !important;
         }
       }
     </style>
+
   </div>
 </div>
-

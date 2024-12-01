@@ -14,7 +14,7 @@ h6,
 em,
 div,
 li,
-span  {
+span {
   color: var(--global-text-color);
 }
 strong {
@@ -532,21 +532,30 @@ footer.sticky-bottom {
   white-space: nowrap;
   border-right: 0.15em solid var(--global-theme-color);
   margin: 0 auto;
-  animation: 
+  animation:
     typing 1s steps(15, end),
     blink-caret 1s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 
 .tag-category-list {
@@ -555,7 +564,7 @@ footer.sticky-bottom {
   padding-top: 1rem;
 
   @media (max-width: 576px) {
-    display: none;  // Hide on mobile devices
+    display: none; // Hide on mobile devices
   }
 
   ul {
@@ -580,10 +589,10 @@ footer.sticky-bottom {
   align-items: center;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
-    top: 0; 
+    top: 0;
     width: 5px;
     height: 100%;
     background-color: var(--global-theme-color);
@@ -600,7 +609,6 @@ footer.sticky-bottom {
     flex-direction: row;
   }
 }
-
 
 .post-list {
   margin: 0;
@@ -640,7 +648,7 @@ footer.sticky-bottom {
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      
+
       .fa-chevron-right {
         margin-left: 7px;
         font-size: 0.5em;
@@ -650,7 +658,7 @@ footer.sticky-bottom {
 
       &:hover {
         color: var(--global-theme-color);
-        
+
         .fa-chevron-right {
           opacity: 1;
           transform: translateX(5px);
@@ -1407,7 +1415,7 @@ ninja-keys::part(ninja-input-wrapper) {
 
 .breadcrumb-nav {
   margin: 0 0 0rem 0;
-  
+
   .breadcrumb {
     padding: 0;
     margin: 0;
@@ -1415,35 +1423,35 @@ ninja-keys::part(ninja-input-wrapper) {
     background: transparent;
     display: flex;
     align-items: center;
-    
+
     .breadcrumb-item {
       display: flex;
-      align-items: center;  // Centers items vertically
+      align-items: center; // Centers items vertically
       font-size: 0.9rem;
       font-weight: 500;
-      line-height: 1;  // Add this to ensure consistent height
-      
+      line-height: 1; // Add this to ensure consistent height
+
       a {
-        color: var(--global-theme-color); 
+        color: var(--global-theme-color);
         text-decoration: none;
-        
+
         &:hover {
           text-decoration: underline;
-          color: var(--global-hover-color);  
+          color: var(--global-hover-color);
         }
       }
-      
+
       // Arrow separator
       + .breadcrumb-item::before {
         content: "/";
         padding: 0 0.6rem;
         color: var(--global-text-color-light);
         font-size: 1.2rem;
-        line-height: 0; 
-        display: flex;   
-        align-items: center; 
+        line-height: 0;
+        display: flex;
+        align-items: center;
       }
-      
+
       &.active {
         color: var(--global-text-color);
       }
@@ -1457,7 +1465,7 @@ ninja-keys::part(ninja-input-wrapper) {
   margin-bottom: 1rem;
   color: var(--global-text-color-light);
   font-size: 0.9rem;
-  
+
   span {
     display: flex;
     align-items: center;
@@ -1477,7 +1485,7 @@ ninja-keys::part(ninja-input-wrapper) {
   justify-content: space-between;
   gap: 1rem;
   margin: 2em 0;
-  
+
   a {
     flex: 1;
     display: flex;
@@ -1489,7 +1497,7 @@ ninja-keys::part(ninja-input-wrapper) {
     background-color: transparent;
     transition: border-color 0.3s ease;
     max-width: 49%;
-    
+
     &:hover {
       border-color: var(--global-theme-color);
       background-color: transparent;
@@ -1517,7 +1525,8 @@ ninja-keys::part(ninja-input-wrapper) {
     font-weight: bold;
   }
 
-  .prev-post, .next-post {
+  .prev-post,
+  .next-post {
     display: flex;
     align-items: center;
     gap: 0.5em;
@@ -1544,7 +1553,7 @@ ninja-keys::part(ninja-input-wrapper) {
   }
 
   .next-post-only {
-    margin-left: auto; 
+    margin-left: auto;
   }
 }
 
@@ -1554,11 +1563,11 @@ ninja-keys::part(ninja-input-wrapper) {
 
   .nav-link {
     position: relative;
-    
-    &:hover::after, 
+
+    &:hover::after,
     &:active::after,
-    &.active::after { 
-      content: '';
+    &.active::after {
+      content: "";
       position: absolute;
       width: 100%;
       height: 2px;
@@ -1570,7 +1579,7 @@ ninja-keys::part(ninja-input-wrapper) {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 0;
       height: 2px;
@@ -1588,21 +1597,21 @@ ninja-keys::part(ninja-input-wrapper) {
     transition: background-color 0.3s ease;
     display: inline-flex;
     align-items: center;
-    
+
     &:hover {
       background-color: var(--global-code-bg-color);
-      
+
       &::after {
         width: 0;
       }
     }
-  
+
     &:active::after,
     &.active::after {
       width: 0;
     }
   }
-} 
+}
 
 // Custom pagination
 .custom-pagination {

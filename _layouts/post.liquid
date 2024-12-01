@@ -108,29 +108,29 @@ layout: default
     {% assign posts = site.posts | sort: 'date' %}
     {% assign first_post = posts | first %}
     {% assign last_post = posts | last %}
-    
+
     {% unless page.url == first_post.url %}
-    <a href="{{ page.previous.url | relative_url }}" class="prev-post">
-      <div class="nav-text">
-        <div class="nav-label">PREVIOUS</div>
-        <div class="nav-title">
-          <i class="fas fa-chevron-left"></i>
-          {{ page.previous.title}}
+      <a href="{{ page.previous.url | relative_url }}" class="prev-post">
+        <div class="nav-text">
+          <div class="nav-label">PREVIOUS</div>
+          <div class="nav-title">
+            <i class="fas fa-chevron-left"></i>
+            {{ page.previous.title }}
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
     {% endunless %}
-    
+
     {% unless page.url == last_post.url %}
-    <a href="{{ page.next.url | relative_url }}" class="next-post {% if page.url == first_post.url %}next-post-only{% endif %}">
-      <div class="nav-text">
-        <div class="nav-label">NEXT</div>
-        <div class="nav-title">
-          {{ page.next.title }}
-          <i class="fas fa-chevron-right"></i>
+      <a href="{{ page.next.url | relative_url }}" class="next-post {% if page.url == first_post.url %}next-post-only{% endif %}">
+        <div class="nav-text">
+          <div class="nav-label">NEXT</div>
+          <div class="nav-title">
+            {{ page.next.title }}
+            <i class="fas fa-chevron-right"></i>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
     {% endunless %}
   </div>
 </div>
