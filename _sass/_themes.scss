@@ -27,15 +27,19 @@
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
   --global-tip-block-text: #215d42;
-  --global-tip-block-title: #359469;
-  --global-warning-block: #e7c000;
+  --global-tip-block-title: #42b983;
+  --global-warning-block: #bd872a;
   --global-warning-block-bg: #fff8d8;
   --global-warning-block-text: #6b5900;
-  --global-warning-block-title: #b29400;
-  --global-danger-block: #c00;
+  --global-warning-block-title: #bd872a;
+  --global-danger-block: #BE3536;
   --global-danger-block-bg: #ffe0e0;
   --global-danger-block-text: #600;
-  --global-danger-block-title: #c00;
+  --global-danger-block-title: #BE3536;
+  --global-note-block: #2B5FC3;
+  --global-note-block-title: #2B5FC3; 
+  --global-important-block: #7B52D7;
+  --global-important-block-title: #7B52D7;
   --global-blockquote-text-color: #{$blockquote-text-color};
   // Light toggle
   #light-toggle-system {
@@ -103,15 +107,19 @@ html[data-theme="dark"] {
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
   --global-tip-block-text: #215d42;
-  --global-tip-block-title: #359469;
-  --global-warning-block: #e7c000;
+  --global-tip-block-title: #42b983;
+  --global-warning-block: #bd872a;
   --global-warning-block-bg: #fff8d8;
   --global-warning-block-text: #6b5900;
-  --global-warning-block-title: #b29400;
-  --global-danger-block: #c00;
+  --global-warning-block-title: #bd872a;
+  --global-danger-block: #BE3536;
   --global-danger-block-bg: #ffe0e0;
   --global-danger-block-text: #600;
-  --global-danger-block-title: #c00;
+  --global-danger-block-title: #BE3536;
+  --global-note-block: #2B5FC3;
+  --global-note-block-title: #2B5FC3; 
+  --global-important-block: #7B52D7;
+  --global-important-block-title: #7B52D7;
   --global-blockquote-text-color: #{$blockquote-text-color};
   .repo-img-light {
     display: none;

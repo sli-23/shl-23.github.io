@@ -59,11 +59,22 @@ table.table a {
 }
 
 blockquote {
+  position: relative;
   background: var(--global-bg-color);
-  border-left: 5px solid var(--global-theme-color);
   margin: 1.5em 0;
-  padding: 1em;
-  font-size: 1.2rem;
+  padding: 0.1em 1em 0.1em 1.5em;
+  font-size: 1rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #bbbbbb;
+    border-radius: 4px;
+  }
 
   p {
     margin-bottom: 0;
@@ -72,64 +83,156 @@ blockquote {
   /* Tips, warnings, and dangers blockquotes */
   &.block-tip {
     border-color: var(--global-tip-block);
-    background-color: var(--global-tip-block-bg);
+    background-color: transparent;
 
-    em,
-    li,
-    p,
-    strong {
-      color: var(--global-tip-block-text);
+    &:before {
+      background-color: var(--global-tip-block);
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    em, li, p {
+      color: var(--global-text-color);
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
       color: var(--global-tip-block-title);
+      font-weight: bold;
+    }
+
+    strong {
+      color: var(--global-tip-block);
+      font-family: monospace;
+      font-size: 0.9rem;
+      &:hover {
+        background-color: var(--global-code-bg-color);
+        padding: 2px 3px;
+        border-radius: 4px;
+      }
     }
   }
 
   &.block-warning {
     border-color: var(--global-warning-block);
-    background-color: var(--global-warning-block-bg);
+    background-color: transparent;
 
-    em,
-    li,
-    p,
-    strong {
-      color: var(--global-warning-block-text);
+    &:before {
+      background-color: var(--global-warning-block);
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    em, li, p {
+      color: var(--global-text-color);
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+    strong {
+      color: var(--global-warning-block);
+      font-family: monospace;
+      font-size: 0.9rem;
+      &:hover {
+        background-color: var(--global-code-bg-color);
+        padding: 2px 3px;
+        border-radius: 4px;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
       color: var(--global-warning-block-title);
+      font-weight: bold;
     }
   }
 
   &.block-danger {
     border-color: var(--global-danger-block);
-    background-color: var(--global-danger-block-bg);
+    background-color: transparent;
 
-    em,
-    li,
-    p,
-    strong {
-      color: var(--global-danger-block-text);
+    &:before {
+      background-color: var(--global-danger-block);
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    em, li, p {
+      color: var(--global-text-color);
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
       color: var(--global-danger-block-title);
+      font-weight: bold;
+    }
+
+    strong {
+      color: var(--global-danger-block);
+      font-family: monospace;
+      font-size: 0.9rem;
+      &:hover {
+        background-color: var(--global-code-bg-color);
+        padding: 2px 3px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &.block-note {
+    border-color: var(--global-note-block);
+    background-color: transparent;
+
+    &:before {
+      background-color: var(--global-note-block);
+    }
+
+    em, li, p {
+      color: var(--global-text-color);
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--global-note-block-title);
+      font-weight: bold;
+    }
+
+    strong {
+      color: var(--global-note-block);
+      font-family: monospace;
+      font-size: 0.9rem;
+      &:hover {
+        background-color: var(--global-code-bg-color);
+        padding: 2px 3px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &.block-important {
+    border-color: var(--global-important-block);
+    background-color: transparent;
+
+    &:before {
+      background-color: var(--global-important-block);
+    }
+
+    em, li, p {
+      color: var(--global-text-color);
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--global-important-block-title);
+      font-weight: bold;
+    }
+
+    strong {
+      color: var(--global-important-block);
+      font-family: monospace;
+      font-size: 0.9rem;
+      &:hover {
+        background-color: var(--global-code-bg-color);
+        padding: 2px 3px;
+        border-radius: 4px;
+      }
     }
   }
 }

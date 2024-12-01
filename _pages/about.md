@@ -259,11 +259,11 @@ _<span style="color: orange; font-weight: bold;"> > code ref:</span> https://p5j
       <span style="font-size: 3.8em;display: block; margin-top: -8px; position: relative;" class="text-4">
         生命燃烧<button style="color: #f39304;font-size: 0.3em; position: absolute; background: transparent; border: none; cursor: pointer; letter-spacing: 2px; font-weight: bold; font-family: 'Roboto Mono', monospace; transition: background 0.3s ease; border-radius: 4px; padding: 1px 1px;" onmouseover="this.style.background='rgba(243, 147, 4, 0.2)'" onmouseout="this.style.background='transparent'" onclick="window.open('https://zh.moegirl.org.cn/zh-hans/%E6%88%91%E5%B7%B2%E7%BB%8F%E7%87%83%E7%83%A7%E6%AE%86%E5%B0%BD%E4%BA%86%EF%BC%8C%E5%8F%AA%E5%89%A9%E4%B8%8B%E9%9B%AA%E7%99%BD%E7%9A%84%E7%81%B0', '_blank')">[1]</button>
       </span>
-      <span style="color: #f39304; font-size: 3.8em; display: block; margin-left: 20px; margin-top: -44px; font-weight: bold; position: relative; z-index: 2;" class="text-5">殆尽_。</span>
+      <span style="color: #f39304; font-size: 4.5em; display: block; margin-left: 20px; margin-top: -45px; font-weight: bold; position: relative; z-index: 2;" class="text-5">殆尽_。</span>
     </div>
 
     <style>
-      @media screen and (min-width: 768px) and (max-width: 1024px) {
+      @media screen and (min-width: 768px) and (max-width: 870px) {
         .responsive-text .text-1 { font-size: 2.4em !important; }
         .responsive-text .text-2 {
           font-size: 3.6em !important;
@@ -275,7 +275,7 @@ _<span style="color: orange; font-weight: bold;"> > code ref:</span> https://p5j
           margin-top: -6px !important;
         }
         .responsive-text .text-5 {
-          font-size: 3em !important;
+          font-size: 3.5em !important;
           margin-top: -35px !important;
         }
       }
