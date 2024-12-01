@@ -36,7 +36,8 @@
   --global-danger-block-bg: #ffe0e0;
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
-
+  --global-blockquote-text-color: #{$blockquote-text-color};
+  // Light toggle
   #light-toggle-system {
     padding-left: 10px;
     padding-top: 12px;
@@ -111,7 +112,7 @@ html[data-theme="dark"] {
   --global-danger-block-bg: #ffe0e0;
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
-
+  --global-blockquote-text-color: #{$blockquote-text-color};
   .repo-img-light {
     display: none;
   }

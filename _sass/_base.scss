@@ -14,30 +14,12 @@ h6,
 em,
 div,
 li,
-span,
-strong {
+span  {
   color: var(--global-text-color);
 }
-
-// Add the new H2 styling here
-h1:not(.blog-title) {
-  position: relative;
-  padding-left: 15px;
-  margin: 25px 0;
-  
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 5px;
-    height: 25px; 
-    background-color: var(--global-theme-color);
-    border-radius: 2px; 
-  }
+strong {
+  color: var(--global-theme-color);
 }
-
 
 hr {
   border-top: 1px solid var(--global-divider-color);
@@ -346,6 +328,9 @@ ul.task-list input[type="checkbox"] {
 }
 
 .navbar-toggler {
+  padding-left: 0;
+  margin-left: 0;
+
   .icon-bar {
     display: block;
     width: 22px;
@@ -588,10 +573,34 @@ footer.sticky-bottom {
 }
 
 .post-title {
+  position: relative;
+  padding-left: 15px;
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0; 
+    width: 5px;
+    height: 100%;
+    background-color: var(--global-theme-color);
+    border-radius: 4px;
+  }
+
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }
 }
+
+@media (max-width: 768px) {
+  .post-title {
+    flex-direction: row;
+  }
+}
+
 
 .post-list {
   margin: 0;
@@ -922,6 +931,16 @@ pre {
     margin-bottom: 0;
     padding: 0;
   }
+
+  .lineno {
+    color: var(--global-blockquote-text-color);
+    font-size: 0.9rem;
+    padding-left: 0.2em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 }
 
 code {
@@ -1022,6 +1041,9 @@ progress::-moz-progress-bar {
 /* Copy button */
 .code-display-wrapper {
   position: relative;
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  margin-bottom: 1rem;
 
   .copy {
     background: var(--global-card-bg-color);
@@ -1396,31 +1418,34 @@ ninja-keys::part(ninja-input-wrapper) {
     
     .breadcrumb-item {
       display: flex;
-      align-items: center;
+      align-items: center;  // Centers items vertically
       font-size: 0.9rem;
       font-weight: 500;
+      line-height: 1;  // Add this to ensure consistent height
       
       a {
-        color: var(--global-theme-color);  // Using theme cyan color
+        color: var(--global-theme-color); 
         text-decoration: none;
         
         &:hover {
           text-decoration: underline;
-          color: var(--global-hover-color);  // Using hover color variable
+          color: var(--global-hover-color);  
         }
       }
       
       // Arrow separator
       + .breadcrumb-item::before {
-        content: "›";
+        content: "/";
         padding: 0 0.6rem;
-        color: var(--global-text-color-light);  // Using theme light text color
+        color: var(--global-text-color-light);
         font-size: 1.2rem;
-        font-weight: 300;
+        line-height: 0; 
+        display: flex;   
+        align-items: center; 
       }
       
       &.active {
-        color: var(--global-text-color);  // Using theme text color
+        color: var(--global-text-color);
       }
     }
   }
@@ -1541,6 +1566,7 @@ ninja-keys::part(ninja-input-wrapper) {
       bottom: 0;
       left: 0;
       transition: width 0.3s ease;
+      border-radius: 3px;
     }
 
     &::after {
@@ -1552,9 +1578,31 @@ ninja-keys::part(ninja-input-wrapper) {
       bottom: 0;
       left: 0;
       transition: width 0.3s ease;
+      border-radius: 3px;
     }
   }
-}
+
+  .nav-link.search-nav-item {
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    
+    &:hover {
+      background-color: var(--global-code-bg-color);
+      
+      &::after {
+        width: 0;
+      }
+    }
+  
+    &:active::after,
+    &.active::after {
+      width: 0;
+    }
+  }
+} 
 
 // Custom pagination
 .custom-pagination {
@@ -1576,3 +1624,4 @@ ninja-keys::part(ninja-input-wrapper) {
   color: var(--global-theme-color) !important;
   margin-right: 5px;
 }
+

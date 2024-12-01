@@ -89,17 +89,14 @@ pagination:
         {% if post.redirect == blank %}
           <a class="post-title" href="{{ post.url | relative_url }}">
             {{ post.title }}
-            <i class="fa-solid fa-chevron-right"></i>
           </a>
         {% elsif post.redirect contains '://' %}
           <a class="post-title" href="{{ post.redirect }}" target="_blank">
             {{ post.title }}
-            <i class="fa-solid fa-chevron-right"></i>
           </a>
         {% else %}
           <a class="post-title" href="{{ post.redirect | relative_url }}">
             {{ post.title }}
-            <i class="fa-solid fa-chevron-right"></i>
           </a>
         {% endif %}
       </h3>

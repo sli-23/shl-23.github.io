@@ -34,8 +34,8 @@ $black-color: #000000 !default;
 
 // Theme colors
 
-$code-bg-color-light: rgba($purple-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+$code-bg-color-light: #ececec;
+$code-bg-color-dark: #3d3d3d !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";
@@ -50,3 +50,6 @@ $back-to-top-right: 30px;
 $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
+
+// Blockquote
+$blockquote-text-color: #808080;
