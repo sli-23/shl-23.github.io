@@ -80,7 +80,6 @@ blockquote {
     margin-bottom: 0;
   }
 
-  /* Tips, warnings, and dangers blockquotes */
   &.block-tip {
     border-color: var(--global-tip-block);
     background-color: transparent;
@@ -105,7 +104,7 @@ blockquote {
       font-family: monospace;
       font-size: 0.9rem;
       &:hover {
-        background-color: var(--global-code-bg-color);
+        background-color: var(--global-tip-block-hover);
         padding: 2px 3px;
         border-radius: 4px;
       }
@@ -131,7 +130,7 @@ blockquote {
       font-family: monospace;
       font-size: 0.9rem;
       &:hover {
-        background-color: var(--global-code-bg-color);
+        background-color: var(--global-warning-block-hover);
         padding: 2px 3px;
         border-radius: 4px;
       }
@@ -167,7 +166,7 @@ blockquote {
       font-family: monospace;
       font-size: 0.9rem;
       &:hover {
-        background-color: var(--global-code-bg-color);
+        background-color: var(--global-danger-block-hover);
         padding: 2px 3px;
         border-radius: 4px;
       }
@@ -198,7 +197,7 @@ blockquote {
       font-family: monospace;
       font-size: 0.9rem;
       &:hover {
-        background-color: var(--global-code-bg-color);
+        background-color: var(--global-note-block-hover);
         padding: 2px 3px;
         border-radius: 4px;
       }
@@ -229,7 +228,7 @@ blockquote {
       font-family: monospace;
       font-size: 0.9rem;
       &:hover {
-        background-color: var(--global-code-bg-color);
+        background-color: var(--global-important-block-hover);
         padding: 2px 3px;
         border-radius: 4px;
       }
@@ -1737,26 +1736,23 @@ ninja-keys::part(ninja-input-wrapper) {
   margin-right: 5px;
 }
 
-:root {
-  // Note block colors
-  --global-note-block: #448aff;        // Blue
-  --global-note-block-title: #2979ff;  // Slightly darker blue
-  --global-note-block-text: var(--global-text-color);
-
-  // Important block colors
-  --global-important-block: #9c27b0;     // Purple
-  --global-important-block-title: #7b1fa2; // Slightly darker purple
-  --global-important-block-text: var(--global-text-color);
-}
-
-[data-theme='dark'] {
-  // Note block colors - dark theme
-  --global-note-block: #82b1ff;        // Lighter blue for dark theme
-  --global-note-block-title: #448aff;  // Slightly darker blue for dark theme
-  --global-note-block-text: var(--global-text-color);
-
-  // Important block colors - dark theme
-  --global-important-block: #ce93d8;     // Lighter purple for dark theme
-  --global-important-block-title: #ba68c8; // Slightly darker purple for dark theme
-  --global-important-block-text: var(--global-text-color);
+.post-content {
+  a[href^="http"], a[href^="https"] {  
+    color: var(--global-theme-color);
+    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    font-family: monospace;
+    
+    &:hover {
+      color: var(--global-hover-color);
+      font-weight: 600;
+      text-decoration: none;
+      background-color: var(--global-theme-color-light);
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  }
 }

@@ -28,19 +28,25 @@
   --global-tip-block-bg: #e2f5ec;
   --global-tip-block-text: #215d42;
   --global-tip-block-title: #42b983;
+  --global-tip-block-hover: #c7e6d8;
   --global-warning-block: #bd872a;
   --global-warning-block-bg: #fff8d8;
   --global-warning-block-text: #6b5900;
   --global-warning-block-title: #bd872a;
+  --global-warning-block-hover: #efe6d7;
   --global-danger-block: #BE3536;
   --global-danger-block-bg: #ffe0e0;
   --global-danger-block-text: #600;
   --global-danger-block-title: #BE3536;
+  --global-danger-block-hover: #e9d3d3;
   --global-note-block: #2B5FC3;
   --global-note-block-title: #2B5FC3; 
+  --global-note-block-hover: #cad5e8;
   --global-important-block: #7B52D7;
   --global-important-block-title: #7B52D7;
+  --global-important-block-hover: #d6cee8;
   --global-blockquote-text-color: #{$blockquote-text-color};
+  --global-theme-color-light: #fee4bd;
   // Light toggle
   #light-toggle-system {
     padding-left: 10px;
@@ -108,19 +114,25 @@ html[data-theme="dark"] {
   --global-tip-block-bg: #e2f5ec;
   --global-tip-block-text: #215d42;
   --global-tip-block-title: #42b983;
+  --global-tip-block-hover: #DDFFF2;
   --global-warning-block: #bd872a;
   --global-warning-block-bg: #fff8d8;
   --global-warning-block-text: #6b5900;
   --global-warning-block-title: #bd872a;
+  --global-warning-block-hover: #dedbd5;
   --global-danger-block: #BE3536;
-  --global-danger-block-bg: #ffe0e0;
+  --global-danger-block-bg: #ffe0e0; 
   --global-danger-block-text: #600;
   --global-danger-block-title: #BE3536;
-  --global-note-block: #2B5FC3;
-  --global-note-block-title: #2B5FC3; 
-  --global-important-block: #7B52D7;
-  --global-important-block-title: #7B52D7;
+  --global-danger-block-hover: #e0a1a1;
+  --global-note-block: #4677d3;
+  --global-note-block-title: #4677d3; 
+  --global-note-block-hover: #a4bae0;
+  --global-important-block: #855fde;
+  --global-important-block-title: #855fde;
+  --global-important-block-hover: #c4b4ea;
   --global-blockquote-text-color: #{$blockquote-text-color};
+  --global-theme-color-light: var(--global-code-bg-color);
   .repo-img-light {
     display: none;
   }
