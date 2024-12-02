@@ -1,22 +1,24 @@
 .tab {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
   padding: 0;
   list-style: none;
   position: relative;
+  border-bottom: 1px solid var(--global-divider-color);
+  --tab-indicator-height: 3px;
+  --tab-indicator-color: var(--global-theme-color);
 }
 
 .tab > * {
   flex: none;
-  padding-left: 20px;
   position: relative;
 }
 
 .tab > * > a {
   display: block;
-  text-align: center;
+  text-align: left;
   padding: 9px 20px;
+  margin-bottom: -3px;
   color: var(--global-text-color-light);
   border-bottom: 2px solid transparent;
   border-bottom-color: transparent;
@@ -28,7 +30,20 @@
 
 .tab > .active > a {
   color: var(--global-text-color);
-  border-color: var(--global-theme-color);
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: var(--tab-indicator-height);
+    background-color: var(--tab-indicator-color);
+    border-radius: 99px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+  }
 }
 
 .tab > li > a {

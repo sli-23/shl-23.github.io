@@ -474,6 +474,10 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-brand {
     color: var(--global-text-color);
+    &.nav-title {
+      font-size: 1.1rem;  
+      padding: 0.25rem 0; 
+    }
   }
 
   .navbar-nav .nav-item .nav-link {
@@ -713,7 +717,7 @@ footer.sticky-bottom {
 
 .blog-title {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   font-family: monospace;
   overflow: hidden;
   white-space: nowrap;
@@ -746,7 +750,6 @@ footer.sticky-bottom {
 }
 
 .tag-category-list {
-  border-bottom: 1px solid var(--global-divider-color);
   text-align: center;
   padding-top: 1rem;
 
@@ -771,7 +774,7 @@ footer.sticky-bottom {
 .post-title {
   position: relative;
   padding-left: 15px;
-  margin: 25px 0;
+  margin: 10px 0;
   display: flex;
   align-items: center;
 
@@ -805,8 +808,8 @@ footer.sticky-bottom {
   li {
     border-bottom: 1px solid var(--global-divider-color);
     list-style: none;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     .post-meta {
       color: var(--global-text-color-light);
@@ -865,19 +868,38 @@ footer.sticky-bottom {
       color: var(--global-text-color);
       padding: 0.75rem 1.15rem;
       font-weight: bold;
+      box-shadow: none;
 
       &:hover {
-        color: $black-color;
+        color: var(--global-text-color);
+        background-color: var(--global-code-bg-color);
       }
     }
 
     &.active .page-link {
       color: $white-color;
       background-color: var(--global-theme-color);
+      box-shadow: none;
 
       &:hover {
         background-color: var(--global-theme-color);
       }
+    }
+  }
+}
+
+// Custom pagination
+.custom-pagination {
+  .page-item {
+    margin: 0 5px;
+
+    .page-link {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
@@ -1819,27 +1841,6 @@ ninja-keys::part(ninja-input-wrapper) {
   }
 }
 
-// Custom pagination
-.custom-pagination {
-  .page-item {
-    margin: 0 5px;
-
-    .page-link {
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-}
-
-.nav-title-symbol {
-  color: var(--global-theme-color) !important;
-  margin-right: 5px;
-}
-
 .post-content {
   a[href^="http"], a[href^="https"] {  
     color: var(--global-theme-color);
@@ -1860,3 +1861,22 @@ ninja-keys::part(ninja-input-wrapper) {
     }
   }
 }
+
+// Add these styles for list markers
+ul, ol {
+  li {
+    &::marker {
+      color: var(--global-theme-color);
+    }
+  }
+  
+  // For nested lists
+  ul, ol {
+    li {
+      &::marker {
+        color: var(--global-text-color-light);
+      }
+    }
+  }
+}
+

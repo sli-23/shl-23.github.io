@@ -22,14 +22,15 @@ pagination:
 {% assign blog_description_size = site.blog_description | size %}
 
 {% if blog_name_size > 0 or blog_description_size > 0 %}
-
-  <div class="header-bar">
-    <div style="display: inline-block;">
-      <h1 class="blog-title">{{ site.blog_name }}.</h1>
+  {% if paginator.page == 1 or paginator.page == nil %}
+    <div class="header-bar">
+      <div style="display: inline-block;">
+        <h1 class="blog-title">&nbsp;{{ site.blog_name }}.</h1>
+      </div>
+      <h4 class="blog-description">{{ site.blog_description }}</h4>
     </div>
-    <h4 class="blog-description">{{ site.blog_description }}</h4>
-  </div>
   {% endif %}
+{% endif %}
 
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 {% if paginator.page == 1 or paginator.page == nil %}
@@ -104,8 +105,9 @@ pagination:
       <p>{{ post.description }}</p>
       <p class="post-meta">
         {{ post.date | date: '%B %d, %Y' }}
+        &nbsp; &middot; &nbsp; <i class="fa-solid fa-clock fa-sm"></i>  {{ read_time }} minutes
         {% if post.external_source %}
-        &nbsp; &middot; &nbsp; {{ post.external_source }}
+        &nbsp; &middot; &nbsp; <i class="fa-solid fa-clock fa-sm"></i>  {{ post.external_source }}
         {% endif %}
       </p>
       <p class="post-tags">

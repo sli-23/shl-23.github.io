@@ -140,7 +140,6 @@ _<span style="color: orange; font-weight: bold;"> > code ref:</span> https://p5j
       }
     </style>
     {% include figure.liquid path="assets/img/ai-generated-figure.png" title="ai-generated figure" class="img-fluid grayscale-effect" %}
-    
   </div>
   <div class="col-sm-4 mt-3 mt-md-0">
     <!-- Add container for the sketch -->
