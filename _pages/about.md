@@ -126,7 +126,7 @@ function draw() {
 }
 </script>
 
-_<span style="color: orange; font-weight: bold;"> > code ref:</span> https://p5js.org/examples/angles-and-motion-aim/_
+<span style="font-weight: bold; color: #f39304;"> > </span> "Welcome to the real world. It sucks. You're gonna love it." <span style="color: #f39304;"> - Rachel Green, </span> <span style="color: #f39304;font-style: italic;">Friends</span> <button style="margin-left: 8px; color: #f39304; font-size: 0.7em; position: absolute; background: transparent; border: none; cursor: pointer; letter-spacing: 2px; font-weight: bold; font-family: 'Roboto Mono', monospace; transition: background 0.3s ease; border-radius: 4px; padding: 1px 1px;" onmouseover="this.style.background='rgba(243, 147, 4, 0.2)'" onmouseout="this.style.background='transparent'" onclick="window.open('https://www.youtube.com/watch?v=8DQel_xMD2M', '_blank')">[1]</button>
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-4 mt-3 mt-md-0">
@@ -256,13 +256,13 @@ _<span style="color: orange; font-weight: bold;"> > code ref:</span> https://p5j
         <span style="vertical-align: middle;">人类有權享有生命</span>
       </span>
       <span style="font-size: 3.8em;display: block; margin-top: -8px; position: relative;" class="text-4">
-        生命燃烧<button style="color: #f39304;font-size: 0.3em; position: absolute; background: transparent; border: none; cursor: pointer; letter-spacing: 2px; font-weight: bold; font-family: 'Roboto Mono', monospace; transition: background 0.3s ease; border-radius: 4px; padding: 1px 1px;" onmouseover="this.style.background='rgba(243, 147, 4, 0.2)'" onmouseout="this.style.background='transparent'" onclick="window.open('https://zh.moegirl.org.cn/zh-hans/%E6%88%91%E5%B7%B2%E7%BB%8F%E7%87%83%E7%83%A7%E6%AE%86%E5%B0%BD%E4%BA%86%EF%BC%8C%E5%8F%AA%E5%89%A9%E4%B8%8B%E9%9B%AA%E7%99%BD%E7%9A%84%E7%81%B0', '_blank')">[1]</button>
+        生命燃烧<button style="color: #f39304;font-size: 0.3em; position: absolute; background: transparent; border: none; cursor: pointer; letter-spacing: 2px; font-weight: bold; font-family: 'Roboto Mono', monospace; transition: background 0.3s ease; border-radius: 4px; padding: 1px 1px;" onmouseover="this.style.background='rgba(243, 147, 4, 0.2)'" onmouseout="this.style.background='transparent'" onclick="window.open('https://zh.moegirl.org.cn/zh-hans/%E6%88%91%E5%B7%B2%E7%BB%8F%E7%87%83%E7%83%A7%E6%AE%86%E5%B0%BD%E4%BA%86%EF%BC%8C%E5%8F%AA%E5%89%A9%E4%B8%8B%E9%9B%AA%E7%99%BD%E7%9A%84%E7%81%B0', '_blank')">[2]</button>
       </span>
       <span style="color: #f39304; font-size: 4.5em; display: block; margin-left: 20px; margin-top: -45px; font-weight: bold; position: relative; z-index: 2;" class="text-5">殆尽_。</span>
     </div>
 
     <style>
-      @media screen and (min-width: 768px) and (max-width: 870px) {
+    </div>  @media screen and (min-width: 768px) and (max-width: 870px) {
         .responsive-text .text-1 { font-size: 2.4em !important; }
         .responsive-text .text-2 {
           font-size: 3.6em !important;
@@ -282,3 +282,21 @@ _<span style="color: orange; font-weight: bold;"> > code ref:</span> https://p5j
 
   </div>
 </div>
+
+#### <span style="color: #f39304; font-weight: bold;"> > </span> About This Blog
+
+The blog is designed to share some of my learning notes that for me to recap everything at anything in any devices. My interests are: **Machine Learning**, **MLLM & LLM**, **Web Development**.
+
+这个博客只是为了逼迫自己养成写博客的习惯以及让自己多学一些新的东西。纯纯就是满足自己想搞一些好玩的前端而搞出来的玩意。脑子里有无数个想法，在自己的小本本上也画了一些杂七杂八的东西，想着趁着没有真的投入社畜生活前好好的满足自己。没有纯手撸的狠活，只有日日夜夜与AI的协同合作和开源社区那些天才们的想法。
+
+<div style="margin: 2rem 0;"></div>
+
+#### <span style="color: #f39304; font-weight: bold;"> > </span> Little Echo Cat
+
+```bash
+echo "
+ /\_/\  
+( o.o ) 
+ > ^ <
+"
+```

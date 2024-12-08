@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SOMNIUM  
-permalink: /projects/
+title: NEWSPAPER  
+permalink: /newspaper/
 description: A growing collection of your cool projects.
 nav: true
 nav_order: 3
